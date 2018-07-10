@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="styleSheet.css">
+        
+        <style>
+            
+            
+            
+        </style> 
+        
+        <script src="js/d3.v3.min.js" charset="utf-8"></script>
+                        <script src="js/dimple.v2.2.0.min.js"></script>
+                        <script src="js/jquery-1.12.0.min.js"></script>
+                        <script src="js/jquery-1.12.0.min.js"></script>
+                        <script src="jquery.csv.min.js"></script>
+                        <script type="text/javascript">
+                            
+                        </script>
+                        <script src="js/line.js"></script>
+        
+    </head> 
+    
+    <div class="sidebutton">
+                
+                <div class="dropdown">
+            <button class="button" id="change1" onclick="collapse1()">Graduation Rate</button>
+                    </div>
+                
+            <div class="dropdown">    
+                
+            <button class="button" id="change2" style="padding-left: 10%; padding-right: 12.5%" onclick="collapse2()">Employment Rate</button>
+        </div>
+                <div class="dropdown">    
+                <button class="button" id="change3" style="padding-left: 10%; padding-right: 17%" onclick="collapse3()">Retention Rate</button>
+                </div>
+            <div class="dropdown">    
+            <button class="button" id="change4" style="padding-left: 10%; padding-right: 1%;" onclick="collapse4()">Earnings
+ </button>
+                
+                </div>
+        <div class="dropdown">    
+            <button class="button" id="change5" style="padding-left: 1%; padding-right: 1%;" onclick="collapse5()">Inter-College Transfer Rate
+ </button>
+                
+                </div>
+            </div>
+    
+    <div id="Wrapper">
+        <div class="content">
+            
+    
+            
+            <div class="County">
+            <p>College Info Dashboard</p>
+                
+            </div>
+            
+             
+            
+            </div>
+                        
+            
+            
+            
+            <div id="collapse1">
+            
+            
+            <div class="ChartTitle">
+                <div class="buttons">
+                    <p> College: 
+                        <select id="btn3">
+                            <option value="All Colleges" selected="selected">All</option>
+                            <option value="Montgomery College">Montgomery College</option>
+                            <option value="Baltimore Community College">Baltimore Community College</option>
+                            <option value="University of Baltimore" >University of Baltimore</option>
+                        </select>            
+                    </p>
+                    <p>
+                        Program: 
+                        <select id="btn4"> 
+                            <option value="All Programs">All Programs</option>
+                            <option value="Cyber Security">Cyber Security</option>
+                            <option value="Accounting">Accounting</option>
+                            <option value="Management">Management</option>
+                        </select>            
+                    </p>
+                </div>
+                
+                <p>Demographics</p>
+            </div>
+            
+            <div class="ChartDiv">
+                
+                
+                
+                
+                    <div id="Chart3">
+                        <script src="js/d3.v3.min.js" charset="utf-8"></script>
+                        <script src="js/dimple.v2.1.6.min.js"></script>    
+                        <script type="text/javascript">
+
+                            
+                            
+
+                        </script>
+                        <p></p>
+                    </div>
+                
+                
+
+                
+            </div>
+            <div id="Collapse2">
+            <div class="Table">
+                            <table id ="table3">
+                    <tr class="HeadRow" style="background-color: white;">
+                        <th>Graduation Rates 2016: </th>
+                        <th>Cyber Security</th>
+                        <th>Accounting</th>
+                        <th>Management</th>
+                    </tr>
+                    <tr class="HeadRow">
+                                <th>Montgomery College</th>
+                            <th></th>
+                        <th></th>
+                        <th></th>
+                        
+                                </tr>
+                                
+                                <tr>
+                        <th></th>
+                        <td id="g1">#1</td>
+                        <td id="g2">#2</td>
+                        <td id="g3">#3</td>
+                        
+                    </tr>
+                    <tr class="HeadRow">
+                                <th>Baltimore Community College</th>
+                            <th></th>
+                        <th></th>
+                        <th></th>
+                       
+                                </tr>
+                    <tr>
+                        <th></th>
+                        <td id="g4">#1</td>
+                        <td id="g5">#2</td>
+                        <td id="g6">#3</td>
+                        
+                    </tr>
+                    <tr class="HeadRow">
+                                <th>University of Baltimore</th>
+                            <th></th>
+                        <th></th>
+                        <th></th>
+                       
+                                </tr>
+                    <tr class="FootRow">
+                        <th></th>
+                        <td id="g7">#1</td>
+                        <td id="g8">#2</td>
+                        <td id="g9">#3</td>
+                        
+                    </tr>
+                </table>
+                
+                
+            </div>
+                </div>
+                
+        <div id="Collapse3" style="display: none;">
+            <div class="Table">
+                            <table id ="table4">
+                    <tr class="HeadRow" style="background-color: white;">
+                        <th>Employment Rates 2016: </th>
+                        <th>Program 1</th>
+                        <th>Program 2</th>
+                        <th>Program 3</th>
+                    </tr>
+                    <tr class="HeadRow">
+                                <th>College A</th>
+                            <th></th>
+                        <th></th>
+                        <th></th>
+                        
+                                </tr>
+                                
+                                <tr>
+                        <th></th>
+                        <td id="e1">#1</td>
+                        <td id="e2">#2</td>
+                        <td id="e3">#3</td>
+                        
+                    </tr>
+                    <tr class="HeadRow">
+                                <th>College B</th>
+                            <th></th>
+                        <th></th>
+                        <th></th>
+                       
+                                </tr>
+                    <tr>
+                        <th></th>
+                        <td id="e4">#1</td>
+                        <td id="e5">#2</td>
+                        <td id="e6">#3</td>
+                        
+                    </tr>
+                    <tr class="HeadRow">
+                                <th>College C</th>
+                            <th></th>
+                        <th></th>
+                        <th></th>
+                       
+                                </tr>
+                    <tr class="FootRow">
+                        <th></th>
+                        <td id="e7">#1</td>
+                        <td id="e8">#2</td>
+                        <td id="e9">#3</td>
+                        
+                    </tr>
+                </table>
+                
+                
+            </div>
+                </div>
+                
+            <div id="Collapse4" style="display: none;">
+            <div class="Table">
+                            <table id ="table5">
+                    <tr class="HeadRow" style="background-color: white;">
+                        <th>Retention Rates 2016: </th>
+                        <th>Program 1</th>
+                        <th>Program 2</th>
+                        <th>Program 3</th>
+                    </tr>
+                    <tr class="HeadRow">
+                                <th>College A</th>
+                            <th></th>
+                        <th></th>
+                        <th></th>
+                        
+                                </tr>
+                                
+                                <tr>
+                        <th></th>
+                        <td id="r1">#1</td>
+                        <td id="r2">#2</td>
+                        <td id="r3">#3</td>
+                        
+                    </tr>
+                    <tr class="HeadRow">
+                                <th>College B</th>
+                            <th></th>
+                        <th></th>
+                        <th></th>
+                       
+                                </tr>
+                    <tr>
+                        <th></th>
+                        <td id="r4">#1</td>
+                        <td id="r5">#2</td>
+                        <td id="r6">#3</td>
+                        
+                    </tr>
+                    <tr class="HeadRow">
+                                <th>College C</th>
+                            <th></th>
+                        <th></th>
+                        <th></th>
+                       
+                                </tr>
+                    <tr class="FootRow">
+                        <th></th>
+                        <td id="r7">#1</td>
+                        <td id="r8">#2</td>
+                        <td id="r9">#3</td>
+                        
+                    </tr>
+                </table>
+                
+                
+            </div>
+                </div>
+                
+            <div id="Collapse5" style="display: none;">
+            <div class="Table">
+                            <table id ="table6">
+                    <tr class="HeadRow" style="background-color: white;">
+                        <th>Average Earnings 2016: </th>
+                        <th>Program 1</th>
+                        <th>Program 2</th>
+                        <th>Program 3</th>
+                    </tr>
+                    <tr class="HeadRow">
+                                <th>College A</th>
+                            <th></th>
+                        <th></th>
+                        <th></th>
+                        
+                                </tr>
+                                
+                                <tr>
+                        <th></th>
+                        <td id="er1">#1</td>
+                        <td id="er2">#2</td>
+                        <td id="er3">#3</td>
+                        
+                    </tr>
+                    <tr class="HeadRow">
+                                <th>College B</th>
+                            <th></th>
+                        <th></th>
+                        <th></th>
+                       
+                                </tr>
+                    <tr>
+                        <th></th>
+                        <td id="er4">#1</td>
+                        <td id="er5">#2</td>
+                        <td id="er6">#3</td>
+                        
+                    </tr>
+                    <tr class="HeadRow">
+                                <th>College C</th>
+                            <th></th>
+                        <th></th>
+                        <th></th>
+                       
+                                </tr>
+                    <tr class="FootRow">
+                        <th></th>
+                        <td id="er7">#1</td>
+                        <td id="er8">#2</td>
+                        <td id="er9">#3</td>
+                        
+                    </tr>
+                </table>
+                
+                
+            </div>
+                </div>
+                
+                <div id="Collapse6" style="display: none;">
+            <div class="Table">
+                            <table id ="table7">
+                    <tr class="HeadRow" style="background-color: white;">
+                        <th>Inter-college Transfer Rate (Including dual enroll and online enroll) 2016: </th>
+                        <th>Program 1</th>
+                        <th>Program 2</th>
+                        <th>Program 3</th>
+                    </tr>
+                    <tr class="HeadRow">
+                                <th>College A</th>
+                            <th></th>
+                        <th></th>
+                        <th></th>
+                        
+                                </tr>
+                                
+                                <tr>
+                        <th></th>
+                        <td id="i1">#1</td>
+                        <td id="i2">#2</td>
+                        <td id="i3">#3</td>
+                        
+                    </tr>
+                    <tr class="HeadRow">
+                                <th>College B</th>
+                            <th></th>
+                        <th></th>
+                        <th></th>
+                       
+                                </tr>
+                    <tr>
+                        <th></th>
+                        <td id="i4">#1</td>
+                        <td id="i5">#2</td>
+                        <td id="i6">#3</td>
+                        
+                    </tr>
+                    <tr class="HeadRow">
+                                <th>College C</th>
+                            <th></th>
+                        <th></th>
+                        <th></th>
+                       
+                                </tr>
+                    <tr class="FootRow">
+                        <th></th>
+                        <td id="i7">#1</td>
+                        <td id="i8">#2</td>
+                        <td id="i9">#3</td>
+                        
+                    </tr>
+                </table>
+                
+                
+            </div>
+                </div>
+                
+               
+                
+                
+                
+        </div>
+
+           
+           
+        </div>
+   
+    
+                
+<script type="text/javascript">
+        //table script   
+        var csvData = [];
+
+        $.ajax({
+            url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTA0sYVEpeavusV8KKN5NmbdrptBSvKhGnTZ36S2pe9AQJvaFFxHnrhjqL-SVkDa5jrUCJRERyLDvPs/pub?gid=1905050396&single=true&output=csv",
+            async: false,
+            success: function (csvd) {
+                csvData = $.csv.toArrays(csvd);
+            },
+            dataType: "text",
+
+
+        });
+        //  var CountyName = "Allegany County"; 
+
+        
+
+         
+        //table 3
+        
+        //wcord = worker
+        var gradCord = [10];
+        //average
+        var empCord = [10];
+        //net change
+        var retCord = [10];
+        //new hires
+        var EarnCord = [10];
+        //turnover
+        var transCord = [10];
+        
+        
+        //double slash means verified
+        
+        gradCord[0] = 91; //+8per
+       
+        empCord[0] = 92;// 8 per 
+       
+        retCord[0] = 93;//4 per
+       
+        EarnCord[0] = 94;//5 per
+       
+        transCord[0] = 95;//5 per
+        
+        
+
+        //remember to subtract 1 for the 0 cell
+        //Add 19 per different LWDA section
+
+       
+        
+        
+        for(var i = 0; i<9; i++){
+            gradCord[i+1] = (gradCord[i] + 5);
+        }
+        
+       
+        for(var i = 0; i < 9; i++){
+            empCord[i+1] = (empCord[i] + 5);
+        }
+               
+        for(var i = 0; i < 9; i++){
+            retCord[i+1] = (retCord[i] + 5);
+        }
+               
+        for(var i = 0; i < 9; i++){
+            EarnCord[i+1] = (EarnCord[i] + 5);
+        }
+               
+        for(var i = 0; i < 9; i++){
+            transCord[i+1] = (transCord[i] + 5);
+        }
+        
+        //new cells
+        $("#g1").text(csvData[gradCord[0]][5]);
+        $("#g2").text(csvData[gradCord[1]][5]);
+        $("#g3").text(csvData[gradCord[2]][5]);
+        $("#g4").text(csvData[gradCord[3]][5]);
+        $("#g5").text(csvData[gradCord[4]][5]);
+        $("#g6").text(csvData[gradCord[5]][5]);
+        $("#g7").text(csvData[gradCord[6]][5]);
+        $("#g8").text(csvData[gradCord[7]][5]);
+        $("#g9").text(csvData[gradCord[8]][5]);
+               
+        //new cells
+        $("#e1").text(csvData[empCord[0]][5]);
+        $("#e2").text(csvData[empCord[1]][5]);
+        $("#e3").text(csvData[empCord[2]][5]);
+        $("#e4").text(csvData[empCord[3]][5]);
+        $("#e5").text(csvData[empCord[4]][5]);
+        $("#e6").text(csvData[empCord[5]][5]);
+        $("#e7").text(csvData[empCord[6]][5]);
+        $("#e8").text(csvData[empCord[7]][5]);
+        $("#e9").text(csvData[empCord[8]][5]);
+               
+        $("#r1").text(csvData[retCord[0]][5]);
+        $("#r2").text(csvData[retCord[1]][5]);
+        $("#r3").text(csvData[retCord[2]][5]);
+        $("#r4").text(csvData[retCord[3]][5]);
+        $("#r5").text(csvData[retCord[4]][5]);
+        $("#r6").text(csvData[retCord[5]][5]);
+        $("#r7").text(csvData[retCord[6]][5]);
+        $("#r8").text(csvData[retCord[7]][5]);
+        $("#r9").text(csvData[retCord[8]][5]);
+               
+        $("#er1").text(csvData[EarnCord[0]][5]);
+        $("#er2").text(csvData[EarnCord[1]][5]);
+        $("#er3").text(csvData[EarnCord[2]][5]);
+        $("#er4").text(csvData[EarnCord[3]][5]);
+        $("#er5").text(csvData[EarnCord[4]][5]);
+        $("#er6").text(csvData[EarnCord[5]][5]);
+        $("#er7").text(csvData[EarnCord[6]][5]);
+        $("#er8").text(csvData[EarnCord[7]][5]);
+        $("#er9").text(csvData[EarnCord[8]][5]);
+               
+        $("#i1").text(csvData[transCord[0]][5]);
+        $("#i2").text(csvData[transCord[1]][5]);
+        $("#i3").text(csvData[transCord[2]][5]);
+        $("#i4").text(csvData[transCord[3]][5]);
+        $("#i5").text(csvData[transCord[4]][5]);
+        $("#i6").text(csvData[transCord[5]][5]);
+        $("#i7").text(csvData[transCord[6]][5]);
+        $("#i8").text(csvData[transCord[7]][5]);
+        $("#i9").text(csvData[transCord[8]][5]);
+        
+       
+
+
+        
+</script>      
+            
+    
+
+   
+
+</html>
