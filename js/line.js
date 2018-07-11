@@ -43,6 +43,7 @@ var togNum1 = 1;
                             eduY.title = "Graduation Rates";
                             edX.title = " ";
         
+                            edSeries.lineMarkers = true;
                             edX.addOrderRule("College A", "College B", "College C");
         
                             var qLegend = wChart.addLegend("65%", "5%", "40%", "95%");
