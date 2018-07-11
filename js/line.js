@@ -99,13 +99,13 @@ d3.select("#change3").on("click", function() {
     });
         
 d3.select("#change4").on("click", function() {
-      whichChart = 4;
+        whichChart = 4;
         wChart.data = EarnData;
+        eduY.title = "Average Earnings";
         eduY.tickFormat = '$,f';
         buttonClick1();
         wChart.draw(1000);
         wChart.draw(1000);
-        eduY.titleShape = "Average Earnings";
     });
         
 d3.select("#change5").on("click", function() {
