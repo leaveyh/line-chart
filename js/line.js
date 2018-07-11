@@ -204,6 +204,17 @@ d3.select("#change5").on("click", function() {
      
   }
         
+        window.drawAll = function(){
+                 
+                                wChart.draw(0, true);
+                                
+                            }; 
+        
+         window.onresize = function () {
+                      
+                        drawAll();
+                    };
+        
                            
 
                            
